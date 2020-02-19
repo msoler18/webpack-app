@@ -1,0 +1,25 @@
+{
+  "name": "implementwebpack",
+  "version": "1.0.0",
+  "description": "Webpack stack implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:external": "webpack --config ./external/webpack.config.js",
+    "build:multi": "webpack --config ./multiple-entry-points/webpack.config.js",
+    "build:css": "webpack --config ./css-style-loader/webpack.config.js"
+
+  },
+  "keywords": [
+    "Webpack"
+  ],
+  "author": "Miguel Soler <msoler735@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "2.1.1",
+    "style-loader": "1.1.3",
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2"
+  }
+}

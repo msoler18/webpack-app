@@ -1,0 +1,1 @@
+console.log("Hello miguel from webpack and npm")
