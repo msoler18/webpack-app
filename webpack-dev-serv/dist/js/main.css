@@ -1,0 +1,12 @@
+.style-loader-wrapper{
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.style-loader-wrapper h1{
+  font-size:2rem;
+}
