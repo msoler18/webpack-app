@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname,'src/js/app.js'),
@@ -8,6 +9,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname,'dist/js'),
     filename:'bundle.js' 
+  },
+  devServer:{
+    open:true
   },
   module:{
     rules:[
@@ -23,13 +27,12 @@ module.exports = {
     ]
   },
   plugins:[
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCSSExtractPlugin({
-      path: path.resolve(__dirname,'dist/css'),
       filename:'[name].css'
     }),
     new HtmlWebpackPlugin({
-      path: path.resolve(__dirname,'dist'),
-      title:'Plugins'
+      title:'Webpack Dev Server'
     })
   ]
 }
